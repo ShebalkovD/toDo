@@ -34,3 +34,17 @@
 .text{
     text-align: center;
 }
+
+
+
+.todo-item{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2196F3;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 30px;
+    align-items: center;
+}
