@@ -48,3 +48,13 @@
     height: 30px;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.active{
+    opacity: 0.6;
+    
+}
+
+.deleted{
+    transition: all 5s;
+}
