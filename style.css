@@ -1,53 +1,123 @@
+body{
+    background-color: #7BDAF3;
+    color: #818181;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 12px;
+}
+
 .space{
-    width: 300px;
+    width: 230px;
     height: 40px;
-    background-color: #2196F3;
     display: flex;
     margin: 0 auto;
     border-radius: 10px;
     align-items: center;
-    margin-bottom: 50px;
+    position: absolute;
+    bottom: 10px;
+    
 }
 
 .space__enter{
-    width: 250px;
+    width: 180px;
     height: 25px;
     border-radius: 12px;
     border: none;
     position: relative;
     margin-left: 5px;
+    margin-right: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 12px;
+    color: #818181;
+    padding-left: 10px;
 }
 
+.space__enter:focus{
+    outline: none;
+}
+
+.btn img{
+    width: 15px;
+    height: 15px;
+    margin-left: -1px;
+}
 
 .btn{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    background-color: transparent;
+    background-color: #9EC862;
     margin-left: 5px;
+    padding: 0;
+   justify-content: center;
+   
 }
+
+
 
 .text{
     text-align: center;
 }
 
+.btn-delete{
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: 5px;
+}
 
+.btn-complete{
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #818181;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition:  300ms;
+    
+}
+
+.btn-complete:checked{
+    background-color: #9EC862;
+    transform: translateY(-1px);
+}
 
 .todo-item{
     text-align: center;
     display: flex;
     justify-content: space-between;
-    background-color: #2196F3;
-    max-width: 250px;
+    background-color: #fff;
+    max-width: 200px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 5px;
     height: 30px;
     align-items: center;
     margin-bottom: 10px;
+    border-radius: 20px;
+    color: #818181;
+    transition:  300ms;
+    padding-left: 10px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.buttons img{
+    width: 15px;
+    height: 15px;
 }
 
 .active{
@@ -57,4 +127,18 @@
 
 .deleted{
     transition: all 5s;
+}
+
+.todo__template{
+    width: 230px;
+    height: 300px;
+    background-color: #ECFAF5;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    transition:  300ms;
 }

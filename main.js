@@ -16,13 +16,14 @@ function Task(description){
 const createTemplate = (task, index) => {
     return `
     <div class="todo-item">
-            <div class="description">${task.description}</div>
-            <div class="buttons">
-                <input onclick = "completeTask(${index})" type="checkbox" class="btn-complete">
-                <button onclick = "deleteTask(${index})" class="btn__delete">delete</button>
+                <div class="description">${task.description}</div>
+                <div class="buttons">
+                    <input onclick = "completeTask(${index})" type="checkbox" class="btn-complete">
+                    <button onclick = "deleteTask(${index})"" class="btn-delete"><img src="/images/delete.svg" alt=""></button>
+                </div>
             </div>
-        </div>
     `
+   
 }
 
 const fillHtmlList = () => {
@@ -32,7 +33,9 @@ const fillHtmlList = () => {
             taskWrapper.innerHTML += createTemplate(item, index);
         });
        todosItems = document.querySelectorAll('.todo-item') 
+       
     }
+    inputText.value = "";
 }
 
 fillHtmlList()
@@ -45,15 +48,18 @@ const updateLocal = () => {
 taskBtn.onclick = () => {
     tasks.push(new Task(inputText.value));
     updateLocal();
-    fillHtmlList()
+    fillHtmlList();
+    
 }
 
 const completeTask = index => {
     tasks[index].completed = !tasks[index].completed;
     if(tasks[index].completed){
-        todosItems[index].classList.add('active')
+        todosItems[index].classList.add('active');
+        document.querySelector('.btn-complete').innerHTML = '<img src="/images/checked.svg" alt="">'
     }else{
-        todosItems[index].classList.remove('active')
+        todosItems[index].classList.remove('active');
+        document.querySelector('.btn-complete').innerHTML = ''
     }
     updateLocal();
     
@@ -65,6 +71,6 @@ const deleteTask = index => {
         tasks.splice(index, 1);
     updateLocal();
     fillHtmlList();
-    }, 500 )
+    }, 100 )
 }
 
