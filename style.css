@@ -150,12 +150,14 @@ body{
 .line-arrow{
     display: none;
     justify-content: center;
+    transition: all 3s;
 }
 
 .line{
     width: 200px;
     height: 1px;
     background-color: #c4c4c4;
+    margin-bottom: 10px;
 
 }
 
