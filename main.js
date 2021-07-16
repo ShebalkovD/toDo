@@ -32,7 +32,7 @@ const updateLocal = () => {
 
  const createTemplate = (task,index) => {
     return `
-    <div class="todo-item" >
+    <div class="todo-item ${task.completed ? 'active' : ''}"  >
                 <div class="description">${task.description}</div>
                 <div class="buttons">
                     <input onclick = "completeTask(${index})" type="checkbox" class="btn-complete" ${task.completed ? 'checked' : ''}>
