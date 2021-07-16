@@ -87,6 +87,14 @@ const updateLocal = () => {
  }
 
  const deleteTask = index => {
-     tasks.splice(index, 1)
-     updatePage()
+     if(tasks[index].completed){
+        todosItems[index].classList.add('deletedCompleted')
+     }else{
+        todosItems[index].classList.add('deleted')
+     }
+    setTimeout(( ) => {
+       tasks.splice(index, 1)
+     updatePage() 
+    } , 300) 
+    
  }
